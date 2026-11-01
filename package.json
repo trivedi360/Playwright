@@ -1,0 +1,15 @@
+{
+  "name": "playwrightcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test tests/02_ApiTestAutomation/02_ApiUsingUtils.spec.js --headed"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5"
+  }
+}

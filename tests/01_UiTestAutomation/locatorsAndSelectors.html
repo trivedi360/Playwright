@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Playwright Locator Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 2rem auto;
+      max-width: 42rem;
+      padding: 0 1rem;
+    }
+
+    form {
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      margin: 1rem 0;
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Playwright Locator Practice</h1>
+    <p>Use this page to practise locating and interacting with common elements.</p>
+
+    <form id="login-form" class="login-form">
+      <input id="emailId" name="emailName" placeholder="Email address">
+      <input name="password" type="password">
+      <button type="submit" id="submit" data-testid="submit">Sign in</button>
+      <p id="login-status" role="status" aria-live="polite"></p>
+    </form>
+
+  </main>
+
+  <script>
+    document.querySelector('#login-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      document.querySelector('#login-status').textContent = 'Signed in successfully';
+    });
+  </script>
+</body>
+
+</html>
